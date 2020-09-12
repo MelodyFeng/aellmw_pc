@@ -1,12 +1,14 @@
 <template>
     <div id="app">
         <HeaderTop @signIn="showLoginFlag = true"></HeaderTop>
-        <Login v-if="showLoginFlag" @closeLogin="showLoginFlag = false"></Login>
-        <div id="nav"></div>
-        <div>
+        <nav class="nav_container">
+            <Nav></Nav>
+        </nav>
+        <div class="carousel_container">
             <Carousel></Carousel>
         </div>
         <router-view />
+        <Login v-if="showLoginFlag" @closeLogin="showLoginFlag = false"></Login>
     </div>
 </template>
 
@@ -14,9 +16,10 @@
 import HeaderTop from './components/HeaderTop/HeaderTop';
 import Login from './components/Login/Login';
 import Carousel from './components/Carousel/Carousel';
+import Nav from './components/Nav/Nav';
 export default {
     //外部组件
-    components: { HeaderTop, Login, Carousel },
+    components: { HeaderTop, Login, Carousel, Nav },
 
     //内部数据
     data() {
@@ -41,18 +44,6 @@ export default {
     text-align: center;
     color: #2c3e50;
     position: relative;
-}
-
-#nav {
-    padding: 30px;
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
-    }
+    min-width: 1000px;
 }
 </style>

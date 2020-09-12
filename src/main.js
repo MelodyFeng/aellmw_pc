@@ -3,11 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './assets/reset.css';
-import { Avatar, Modal, Carousel } from 'ant-design-vue';
+import Ant from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
-Vue.use(Avatar);
-Vue.use(Modal);
-Vue.use(Carousel);
+Vue.use(Ant);
 Vue.config.productionTip = false;
 
 new Vue({
