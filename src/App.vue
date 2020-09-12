@@ -1,10 +1,7 @@
 <template>
     <div id="app">
         <HeaderTop @signIn="showLoginFlag = true"></HeaderTop>
-        <nav class="nav_container">
-            <Nav></Nav>
-        </nav>
-        <div class="carousel_container">
+        <div>
             <Carousel></Carousel>
         </div>
         <router-view />
@@ -16,10 +13,9 @@
 import HeaderTop from './components/HeaderTop/HeaderTop';
 import Login from './components/Login/Login';
 import Carousel from './components/Carousel/Carousel';
-import Nav from './components/Nav/Nav';
 export default {
     //外部组件
-    components: { HeaderTop, Login, Carousel, Nav },
+    components: { HeaderTop, Login, Carousel },
 
     //内部数据
     data() {
@@ -44,6 +40,6 @@ export default {
     text-align: center;
     color: #2c3e50;
     position: relative;
-    min-width: 1000px;
+    min-width: 1200px;
 }
 </style>

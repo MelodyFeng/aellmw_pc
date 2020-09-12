@@ -5,22 +5,29 @@
             <div class="header_logo">
                 <img src="../../assets/images/defaultLogo.png" />
             </div>
-            <div class="header_title">一带一路多式联运智能物流平台</div>
+            <div class="header_title">多式联运智能物流平台</div>
         </div>
+        <nav class="header_nav">
+            <Nav></Nav>
+        </nav>
         <div class="header_login">
-            <div class="user_avatar">
-                <a-avatar icon="user" />
+            <div class="user_login" @click="signIn">
+                <i class="iconfont icon-denglu" style="margin-right:5px"></i
+                >登录
             </div>
-            <div class="user_login" @click="signIn">登录</div>
-            <div class="user_login" @click="signUp">注册</div>
+            <span style="position: relative;top: 4px;right: 60px;">|</span>
+            <div class="user_signUp" @click="signUp">
+                <i class="iconfont icon-zhuce" style="margin-right:5px"></i>注册
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import Nav from '../../components/Nav/Nav';
 export default {
     //外部组件
-    components: {},
+    components: { Nav },
 
     //内部数据
     data() {
@@ -47,7 +54,7 @@ export default {
 .header_content {
     width: 100%;
     height: 60px;
-    padding: 0 100px;
+    padding: 0 5%;
     background: #f6f7fb;
     .header_info {
         //logo名称
@@ -55,19 +62,22 @@ export default {
             float: left;
         }
         .header_logo {
-            padding-top: 10px;
+            padding-top: 15px;
             img {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
             }
         }
         .header_title {
-            margin-left: 30px;
+            margin-left: 20px;
             color: #515151;
             line-height: 60px;
             font-weight: 800;
             font-family: PingFang SC, PingFang SC-Heavy;
         }
+    }
+    .header_nav {
+        float: left;
     }
     .header_login {
         //登录
@@ -82,11 +92,14 @@ export default {
             margin-right: 15px;
         }
         .user_login {
+            margin-right: 20px;
+        }
+        .user_login,
+        .user_signUp {
             line-height: 30px;
             color: #8e8e93;
-            margin-right: 10px;
             cursor: pointer;
-            &:hover {
+            &:hover:not(span) {
                 color: red;
             }
         }

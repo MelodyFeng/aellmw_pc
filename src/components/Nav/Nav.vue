@@ -1,7 +1,7 @@
 <!-- 导航 -->
 <template>
     <div>
-        <a-menu v-model="current" mode="horizontal" defaultSelectedKeys="home">
+        <a-menu v-model="current" mode="horizontal" class="nav_container">
             <!-- 首页 -->
             <a-menu-item key="home">
                 首页
@@ -100,25 +100,6 @@
         </a-menu>
     </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            currentItem: ['home'],
-        };
-    },
-};
-</script>
-
-<script>
-export default {
-    data() {
-        return {
-            current: ['mail'],
-        };
-    },
-};
-</script>
 
 <script>
 export default {
@@ -127,7 +108,7 @@ export default {
 
     //内部数据
     data() {
-        return {};
+        return { current: ['home'] };
     },
 
     //监听属性
@@ -144,6 +125,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav_container {
+    background: #f6f7fb;
+    margin-left: 25px;
+    &.ant-menu-root {
+        border: none;
+        line-height: 58px;
+    }
+}
 .ant-menu-sub li.ant-menu-item {
     height: 25px;
     line-height: 25px;
