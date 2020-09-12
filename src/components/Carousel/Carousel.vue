@@ -40,10 +40,6 @@ export default {};
     opacity: 0.5;
 }
 
-.ant-carousel >>> .slick-slide h3 {
-    color: #fff;
-}
-
 .car_img {
     width: 100%;
 }
