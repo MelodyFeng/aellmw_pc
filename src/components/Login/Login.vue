@@ -19,7 +19,7 @@
                     />
                 </div>
                 <div class="login_input">
-                    <i class="iconfont icon-yanzhengma"></i>
+                    <i class="iconfont icon-yanzhengma1"></i>
                     <input
                         type="tel"
                         maxlength="4"
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="login_input">
-                    <i class="iconfont icon-yanzhengma1"></i>
+                    <i class="iconfont icon-yanzhengma"></i>
                     <input
                         type="tel"
                         maxlength="6"
@@ -203,6 +203,9 @@ export default {
                 left: 10px;
                 border-right: 1px solid #979797;
                 padding-right: 8px;
+                width: 27px;
+                height: 27px;
+                line-height: 27px;
             }
         }
     }

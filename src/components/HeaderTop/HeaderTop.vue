@@ -15,7 +15,6 @@
                 <i class="iconfont icon-denglu" style="margin-right:5px"></i
                 >登录
             </div>
-            <span style="position: relative;top: 4px;right: 60px;">|</span>
             <div class="user_signUp" @click="signUp">
                 <i class="iconfont icon-zhuce" style="margin-right:5px"></i>注册
             </div>
