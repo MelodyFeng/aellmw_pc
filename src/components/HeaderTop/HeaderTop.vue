@@ -7,9 +7,15 @@
             </div>
             <div class="header_title">多式联运智能物流平台</div>
         </div>
-        <nav class="header_nav">
-            <Nav></Nav>
-        </nav>
+        <div class="heard_search">
+            <!-- <input type="text" id="search-input" value="" placeholder="搜索" />
+            <div class="search_chaxun">
+                <i class="iconfont icon-chaxun"></i>
+            </div> -->
+
+            <router-link to="/manageIndex">进入后台</router-link>
+        </div>
+
         <div class="header_login">
             <div class="user_login" @click="signIn">
                 <i class="iconfont icon-denglu" style="margin-right:5px"></i
@@ -23,10 +29,9 @@
 </template>
 
 <script>
-import Nav from '../../components/Nav/Nav';
 export default {
     //外部组件
-    components: { Nav },
+    components: {},
 
     //内部数据
     data() {
@@ -53,8 +58,9 @@ export default {
 .header_content {
     width: 100%;
     height: 60px;
-    padding: 0 5%;
-    background: #f6f7fb;
+    padding: 0 10px;
+    background: #ffffff;
+    position: relative;
     .header_info {
         //logo名称
         > div {
@@ -75,8 +81,39 @@ export default {
             font-family: PingFang SC, PingFang SC-Heavy;
         }
     }
-    .header_nav {
+    .heard_search {
         float: left;
+        border-radius: 5px;
+        height: 30px;
+        line-height: 20px;
+        border: 1px solid #dedede;
+        background-color: #fff;
+        color: #333;
+        outline: none;
+        font-size: 14px;
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        width: 350px;
+        input {
+            padding: 4px 10px;
+            float: left;
+            width: 290px;
+        }
+        .search_chaxun {
+            width: 40px;
+            float: right;
+            background: $theme_blue;
+            color: #ffffff;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #3b99fc;
+            position: relative;
+            top: -1px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
     }
     .header_login {
         //登录
@@ -99,7 +136,7 @@ export default {
             color: #8e8e93;
             cursor: pointer;
             &:hover:not(span) {
-                color: red;
+                color: #3b99fc;
             }
         }
     }

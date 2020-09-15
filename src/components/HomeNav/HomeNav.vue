@@ -127,14 +127,36 @@ export default {
 <style lang="scss" scoped>
 .nav_container {
     background: #f6f7fb;
-    margin-left: 25px;
     &.ant-menu-root {
         border: none;
-        line-height: 58px;
+        line-height: 35px;
+        background: #3b99fc;
+        color: white;
     }
 }
 .ant-menu-sub li.ant-menu-item {
     height: 25px;
     line-height: 25px;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected {
+    //选择样式
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+.ant-menu-submenu-title:hover {
+    color: #ffffff;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+    color: #ffffff;
+    background: #086dd8;
 }
 </style>

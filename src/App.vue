@@ -1,21 +1,21 @@
 <template>
     <div id="app">
-        <HeaderTop @signIn="showLoginFlag = true"></HeaderTop>
-        <div>
-            <Carousel></Carousel>
-        </div>
-        <router-view />
         <Login v-if="showLoginFlag" @closeLogin="showLoginFlag = false"></Login>
+        <!-- 顶部 -->
+        <HeaderTop
+            @signIn="showLoginFlag = true"
+            v-if="$route.path == './home'"
+        ></HeaderTop>
+        <router-view />
     </div>
 </template>
 
 <script>
 import HeaderTop from './components/HeaderTop/HeaderTop';
 import Login from './components/Login/Login';
-import Carousel from './components/Carousel/Carousel';
 export default {
     //外部组件
-    components: { HeaderTop, Login, Carousel },
+    components: { HeaderTop, Login },
 
     //内部数据
     data() {
@@ -40,6 +40,7 @@ export default {
     text-align: center;
     color: #2c3e50;
     position: relative;
-    min-width: 1200px;
+    min-width: 1000px;
+    height: 100%;
 }
 </style>
